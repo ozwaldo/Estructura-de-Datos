@@ -15,7 +15,31 @@ public class PilaJava {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Pila pila = new Pila();
+        
+        System.out.println("Pila vacia: " + 
+                pila.vacia());
+        
+        pila.push("Pedro");
+        pila.push("Pablo");
+        pila.push("Adrian");
+        
+        System.out.println("Cima de pila: " + 
+                pila.peek());
+        
+        System.out.println("Elementos dentro de la pila: " +
+                pila.size());
+        
+        System.out.println("Elemento eliminado: " +
+                pila.pop());
+        
+        System.out.println("Cima de pila: " + 
+                pila.peek());
+        
+        System.out.println("Elementos dentro de la pila: " +
+                pila.size());
+        
+        
     }
     
 }
