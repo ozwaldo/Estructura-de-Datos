@@ -42,12 +42,22 @@ public class Pila implements PilaInterface{
 
     @Override
     public boolean vacia() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if (top != null) {
+            return false;
+        } else {
+            return true;
+        }          
     }
 
     @Override
-    public int size() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public int size()   {
+        int tam = 0;
+        PilaNodo aux = top;
+        while (aux != null) {            
+            tam++;
+            aux = aux.getSiguiente();
+        }
+        return tam;
     }
     
     
