@@ -7,11 +7,10 @@ package listajava;
 
 /**
  *
- * @author Docente AT-4
+ * @author Sistemas
  */
 public interface ListaInterface {
-        
-        // Obtenemos el tamaño de la lista
+    // Obtenemos el tamaño de la lista
         public int getSize();
         // Obtenemos los datos de un nodo de la lista.
         public String getDatos(int posicion);
@@ -28,7 +27,7 @@ public interface ListaInterface {
         // Buscamos si existe un nodo.
         public boolean buscar(String datos);
         // Obtenemos la posición de un dato.
-        public int getPosicion(String datos);
+        public int getPosicion(String datos) throws Exception;
         // Editamos los datos por referencia.
         public void editPorReferencia(String ref, String datos);
         // Editamos los datos por posición.
