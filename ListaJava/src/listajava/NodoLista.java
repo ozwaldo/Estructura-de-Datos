@@ -7,7 +7,7 @@ package listajava;
 
 /**
  *
- * @author Docente AT-4
+ * @author Sistemas
  */
 public class NodoLista {
     private String datos;
@@ -30,5 +30,4 @@ public class NodoLista {
         this.siguiente = siguiente;
     }
     
-        
 }
