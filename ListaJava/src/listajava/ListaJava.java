@@ -7,15 +7,47 @@ package listajava;
 
 /**
  *
- * @author Docente AT-4
+ * @author Sistemas
  */
 public class ListaJava {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    static Lista  lista;
+    public static void main(String[] args) throws Exception {
+         lista = new Lista();        
+        System.out.println("Inicio lista.");        
+        lista.addInicio("A");
+        lista.addFinal("B");
+        lista.addFinal("C");        
+        System.out.println("Mostrar posicion: " 
+                + lista.getDatos(4));        
+        mostrarDatos();        
+        lista.addInicio("D");
+        mostrarDatos();
+        lista.addFinal("E");
+        mostrarDatos();
+        lista.addPosicion(5, "F"); // Tarea
+        mostrarDatos();
+        lista.addReferencia("D", "X"); //Tarea
+        mostrarDatos();
+        System.out.println("Buscar: " + lista.buscar("B"));
+        System.out.println("Obtener posición: " + lista.getPosicion("X"));
+        lista.editPorReferencia("E", "Y");
+        mostrarDatos();
+        lista.editPorPosicion(3, "Nuevo");
+        mostrarDatos();
+        lista.deletePorReferencia("Nuevo");
+        mostrarDatos();
+        lista.deletePorPosicion(2); //Tarea
+        mostrarDatos();
+        lista.deleteLista();
+        mostrarDatos();
+        
+        
+    }    
+    public static void mostrarDatos() {
+         System.out.println("Tamaño: " 
+                + lista.getSize());
+        System.out.println("Imprimir lista: " );
+        lista.showLista();
     }
     
 }
